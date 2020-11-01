@@ -59,12 +59,11 @@ function getWeather(latitude, longitude) {
 }
 
 function displayWeather() {
-    //iconElement.innerHTML = 
 
-    tempElement.innerHTML = `${weather.temperature.value}  <span> C </span>`;
+    iconElement.innerHTML = `<img src="icons/${weather.iconId}.png"/>`
+    tempElement.innerHTML = `${weather.temperature.value}  <span> &deg;C </span>`;
     console.log("Temp", weather.temperature.value);
     descElement.innerHTML = weather.description;
-
     locationElement.innerHTML = `${weather.city}, ${weather.country}`;
 
 }
